@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Calculator</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+	<body>
+		<section class="content">
+				<!-- Header section Start -->
+			<div class="header">
+				<h2><script> document.write("JavaScript Calculator"); </script></h2>
+			</div>
+				<!-- Header section End -->
+
+				<!-- Maincontent start here -->
+
+			<div class="maincontent">
+				<form method="post" action="" id="calculator">
+					<table class="tableForCalculator">	
+
+								<!-- Result show section Start -->				
+						<tr>
+							<td colspan="4"  class="outputTextBox">
+								<input type="text" id="resultShow" disabled="on">
+							</td>							
+						</tr>
+								<!-- Result show section End -->
+
+								<!-- Keyboard section Start -->
+						<tr >							
+							<td colspan="4" class="clearBtn">
+								<input type="button" onclick="allClear()" value="Clear">
+							</td>
+						</tr>
+
+						<tr>
+							<td class="othersBtn">
+								<input type="button" onclick="seven()" value="7">
+							</td>
+							<td class="othersBtn">
+								<input type="button" onclick="eight()" value="8">
+							</td>
+							<td class="othersBtn">
+								<input type="button" onclick="nine()" value="9">
+							</td>
+							<td class="othersBtn">
+								<input type="button" onclick="backSpace()" value="&#8592;">
+							</td>
+						</tr>
+
+						<tr>
+							<td class="othersBtn">
+								<input type="button" onclick="four()" value="4">
+							</td>
+							<td class="othersBtn">
+								<input type="button" onclick="five()" value="5">
+							</td>
+							<td class="othersBtn">
+								<input type="button" onclick="six()" value="6">
+							</td>
+							<td class="othersBtn">
+								<input type="button" onclick="mul()" value="X">
+							</td>
+						</tr>
+
+						<tr>
+							<td class="othersBtn">
+								<input type="button" onclick="one()" value="1">
+							</td>
+							<td class="othersBtn">
+								<input type="button" onclick="two()" value="2">
+							</td>
+							<td class="othersBtn">
+								<input type="button" onclick="three()" value="3">
+							</td>
+							<td class="othersBtn">
+								<input type="button" onclick="sub()" value="-">
+							</td>
+						</tr>
+
+						<tr>
+							<td class="othersBtn">
+								<input type="button" onclick="zero()" value="0">	
+							</td>
+							<td class="othersBtn">
+								<input type="button" onclick="point()" value=".">
+							</td>
+							<td class="othersBtn">
+								<input type="button" onclick="divide()" value="/">
+							</td>
+							<td class="othersBtn">
+								<input type="button" onclick="add()" value="+">
+							</td>
+						</tr>
+
+						<tr>							
+							<td colspan="4" class="equalBtn">
+								<input type="button" onclick="equal()" value="=">
+							</td>
+						</tr>
+
+								<!-- Keyboard section End -->
+					</table>
+				</form>	
+			</div>
+
+				<!-- Maincontent End here -->
+
+				<!-- Footer section Start -->
+			<div class="footer">
+				<h2><script> document.write(" &copy; Shakil Hossain"); </script></h2>
+			</div>
+				<!-- Footer section End -->
+		</section>
+	</body>
+
+		<!-- JavaScript start here -->
+		<script>
+
+			var answer = document.getElementById("resultShow");
+
+			function allClear(){
+				answer.value = '';
+			}
+
+			function backSpace(){
+				answer.value = answer.value.slice(0,-1);
+			}
+
+			function one(){
+			    answer.value +=1;
+			}
+
+			function two(){
+			    answer.value +=2;
+			}
+
+			function three(){
+			    answer.value +=3;
+			}
+
+			function four(){
+			    answer.value +=4;
+			}
+
+			function five(){
+			    answer.value +=5;
+			}
+
+			function six(){
+			    answer.value +=6;
+			}
+
+			function seven(){
+			    answer.value +=7;
+			}
+
+			function eight(){
+			    answer.value +=8;
+			}
+
+			function nine(){
+			    answer.value +=9;
+			}
+
+			function zero(){
+			    answer.value +=0;
+			}
+
+			function point(){
+			    answer.value +='.';
+			}
+
+			function sub(){
+			    answer.value +='-';
+			}
+
+			function add(){
+			    answer.value +='+';
+			}
+
+			function mul(){
+			    answer.value +='*';
+			}
+
+			function divide(){
+			    answer.value +='/';
+			}
+
+			function equal(){			    
+			   answer.value =eval(answer.value);
+			}
+		</script>
+</html>
